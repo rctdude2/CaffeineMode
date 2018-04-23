@@ -16,8 +16,10 @@ namespace CaffeineMode {
             if (Properties.Settings.Default.U_EnableOnStartup) {
                 ToggleCaffeine();
             }
+
             if (Properties.Settings.Default.U_StartMinimized) {
                 this.WindowState = FormWindowState.Minimized;
+                this.Hide();
             }
         }
         private void FormMain_Resize(object sender, EventArgs e) {

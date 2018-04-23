@@ -125,18 +125,19 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 39);
+            this.label1.Size = new System.Drawing.Size(247, 52);
             this.label1.TabIndex = 2;
             this.label1.Text = "Enabling Caffeine Mode prevents your monitor from\r\nautomatically shutting off and" +
-    " your computer from\r\nlocking. You can still manually lock your computer.";
+    " your computer from\r\nlocking, as if you were watching a video.\r\nYou can still ma" +
+    "nually lock your computer.";
             // 
             // EGroupBox_Settings
             // 
             this.EGroupBox_Settings.Controls.Add(this.ECheckBox_Settings_StartMinimized);
             this.EGroupBox_Settings.Controls.Add(this.ECheckBox_Settings_EnableOnStartup);
-            this.EGroupBox_Settings.Location = new System.Drawing.Point(12, 75);
+            this.EGroupBox_Settings.Location = new System.Drawing.Point(12, 88);
             this.EGroupBox_Settings.Name = "EGroupBox_Settings";
-            this.EGroupBox_Settings.Size = new System.Drawing.Size(260, 174);
+            this.EGroupBox_Settings.Size = new System.Drawing.Size(260, 161);
             this.EGroupBox_Settings.TabIndex = 3;
             this.EGroupBox_Settings.TabStop = false;
             this.EGroupBox_Settings.Text = "Settings";

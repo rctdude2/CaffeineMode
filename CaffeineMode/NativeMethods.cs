@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace CaffeineMode {
     internal static class NativeMethods {
-        [FlagsAttribute]
+        [Flags]
         internal enum EXECUTION_STATE : uint {
             ES_AWAYMODE_REQUIRED = 0x00000040,
             ES_CONTINUOUS = 0x80000000,
@@ -15,7 +15,7 @@ namespace CaffeineMode {
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern EXECUTION_STATE SetThreadExecutionState([In] EXECUTION_STATE esFlags);
 
-        internal static EXECUTION_STATE SetThreadXState(EXECUTION_STATE flags) {
+        internal static EXECUTION_STATE ThreadExecutionState(EXECUTION_STATE flags) {
             return SetThreadExecutionState(flags);
         }
     }

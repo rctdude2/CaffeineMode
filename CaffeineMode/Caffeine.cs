@@ -8,7 +8,7 @@ namespace CaffeineMode {
             this.CaffeineEnabled = false;
         }
         public override bool Equals(object obj) {
-            var caffeine = obj as Caffeine;
+			Caffeine caffeine = obj as Caffeine;
             return caffeine != null &&
                    this.CaffeineEnabled == caffeine.CaffeineEnabled;
         }
@@ -21,7 +21,7 @@ namespace CaffeineMode {
         /// </summary>
         /// <returns>true if thread state change was successful, false otherwise</returns>
         public bool EnableThreadState() {
-            EXECUTION_STATE ret = SetThreadXState(EXECUTION_STATE.ES_CONTINUOUS | EXECUTION_STATE.ES_DISPLAY_REQUIRED);
+            EXECUTION_STATE ret = ThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS | EXECUTION_STATE.ES_DISPLAY_REQUIRED);
 
             if (ret == EXECUTION_STATE.ES_CONTINUOUS) {
                 this.CaffeineEnabled = true;
@@ -36,7 +36,7 @@ namespace CaffeineMode {
         /// </summary>
         /// <returns>true if thread state change was successful, false otherwise</returns>
         public bool DisableThreadState() {
-            EXECUTION_STATE ret = SetThreadXState(EXECUTION_STATE.ES_CONTINUOUS);
+            EXECUTION_STATE ret = ThreadExecutionState(EXECUTION_STATE.ES_CONTINUOUS);
 
             if (ret == (EXECUTION_STATE.ES_CONTINUOUS | EXECUTION_STATE.ES_DISPLAY_REQUIRED)) {
                 this.CaffeineEnabled = false;

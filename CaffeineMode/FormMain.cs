@@ -9,7 +9,7 @@ namespace CaffeineMode {
         public FormMain() {
             InitializeComponent();
 
-            caffeine = new Caffeine();
+			this.caffeine = new Caffeine();
             SetStatusIcons(Properties.Resources.icon_red);
         }
         private void FormMain_Shown(object sender, EventArgs e) {
@@ -31,21 +31,21 @@ namespace CaffeineMode {
 
         private void SetStatusIcons(Icon icon) {
             this.Icon = icon;
-            ENotifyIcon_Main.Icon = icon;
+			this.ENotifyIcon_Main.Icon = icon;
         }
         private void SetToggleText(string text) {
-            EContextMenu_NotifyIcon_Main_ItemToggleCaffeine.Text = text;
-            EMenuStrip_Main_ItemFileMenu_ItemToggleCaffeine.Text = text;
+			this.EContextMenu_NotifyIcon_Main_ItemToggleCaffeine.Text = text;
+			this.EMenuStrip_Main_ItemFileMenu_ItemToggleCaffeine.Text = text;
         }
         private void ToggleCaffeine() {
-            if (!caffeine.CaffeineEnabled) {
-                if (caffeine.EnableThreadState()) {
+            if (!this.caffeine.CaffeineEnabled) {
+                if (this.caffeine.EnableThreadState()) {
                     SetStatusIcons(Properties.Resources.icon_green);
                     SetToggleText("Disable Caffeine");
                 }
             }
             else {
-                if (caffeine.DisableThreadState()) {
+                if (this.caffeine.DisableThreadState()) {
                     SetStatusIcons(Properties.Resources.icon_red);
                     SetToggleText("Enable Caffeine");
                 }

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Caffeine Mode")]
-[assembly: AssemblyCopyright("Copyright © Ryan Dupke 2018")]
+[assembly: AssemblyCopyright("Copyright © 2018 Ryan Dupke")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

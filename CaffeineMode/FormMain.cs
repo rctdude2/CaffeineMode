@@ -9,6 +9,12 @@ namespace CaffeineMode {
         public FormMain() {
             InitializeComponent();
 
+            if (Properties.Settings.Default.UpgradeRequired) {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.UpgradeRequired = false;
+                Properties.Settings.Default.Save();
+            }
+
             this.caffeine = new Caffeine();
             SetStatusIcons(Properties.Resources.icon_red);
         }
